@@ -10,7 +10,7 @@ class ParkClass implements SudoPark {
     private int pickups;
 
     ParkClass(String parkId, String name, String address) {
-        this.bikes = new ChainedHashTable<>();
+        this.bikes = new ChainedHashTable<>(BikeManagementClass.DEFAULT_SIZE);
         this.id = parkId;
         this.name = name;
         this.address = address;

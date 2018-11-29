@@ -12,6 +12,8 @@ public class BikeManagementClass implements BikeManagement {
      * Serializable
      */
     static final long serialVersionUID = 0L;
+	static final int DEFAULT_SIZE=1000;
+	static final int DEFAULT_PARK_SIZE=DEFAULT_SIZE/2;
 
     /**
      * Instance Variables
@@ -23,9 +25,9 @@ public class BikeManagementClass implements BikeManagement {
     private int topPickUps;
 
     public BikeManagementClass() {
-        this.users = new ChainedHashTable<>();
-        this.bikes = new ChainedHashTable<>();
-        this.parks = new ChainedHashTable<>();
+        this.users = new ChainedHashTable<>(DEFAULT_SIZE);
+        this.bikes = new ChainedHashTable<>(DEFAULT_SIZE);
+        this.parks = new ChainedHashTable<>(DEFAULT_PARK_SIZE);
         this.delays = new AVLTree<>();
         this.topPickUps = 0;
     }

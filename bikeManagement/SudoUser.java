@@ -3,7 +3,7 @@ package bikeManagement;
 /**
  * Package private Interface for the User. Contains methods that are capable of changing object properties
  */
-public interface SudoUser extends User {
+ interface SudoUser extends User {
     /**
      * Adds an amount to the <code>User</code>'s balance
      *
